@@ -1,0 +1,77 @@
+<DOCTYPE! html>
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>JQuery Tabs</h1>
+
+<br />
+<br />
+
+  <div class="row">
+    <div class="col-100">
+      <div class="tabH">
+        <h3>Click Here</h3>
+      </div>
+      <div class="tabB">
+        <p>In scelerisque eu tellus vel sagittis. Aenean consequat hendrerit lacinia. Sed nec imperdiet lorem. Nullam eleifend congue tortor,
+           sit amet dictum lectus volutpat quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+           Nam dignissim, ligula ut tempor laoreet, nibh ipsum fringilla metus, faucibus consectetur ante enim id elit. Donec eget mollis
+           orci. Proin sit amet leo laoreet sem ullamcorper porta.
+        </p>
+    </div>
+  </div>
+
+
+  <style>
+  * {
+    font-family: arial;
+    box-sizing: border-box;
+    margin: 0px;
+  }
+  .row:after {
+    clear: both;
+    content: "";
+    float: left;
+  }
+  [class*="col-"] {
+    padding: 0px;
+    float: left;
+  }
+  .col-100 {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 300%;
+  }
+  .tabH {
+    font-size: 150%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ccc;
+    transition: color 0.5s;
+  }
+  .tabH:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+  .tabB {
+    display: none; /*hides the text*/
+    padding: 10px;
+    text-align: center;
+  }
+  </style>
+
+  <script>
+  $(document).ready(function(){
+    $(".tabH").click(function(){
+      $(".tabB").slideToggle(); //slideToggle() allows you to click to show and hide
+    });
+  });
+  </script>
+
+</body>
+</html>
